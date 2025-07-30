@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Chad Nedin | Teacher Candidate</title>
+    <link href="https://fonts.googleapis.com/css?family=Inter:400,600,700&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --bg: #f7f8fa;
+        --card: #fff;
+        --primary: #31426c;
+        --accent: #4c5e86;
+        --subtitle: #6d7fa3;
+        --footer: #8a93a6;
+        --shadow: 0 6px 32px rgba(40, 60, 90, 0.10);
+        --radius: 18px;
+        --card-radius: 12px;
+      }
+      body {
+        margin: 0;
+        font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+        background: var(--bg);
+        color: #222;
+      }
+      .container {
+        max-width: 480px;
+        margin: 40px auto;
+        padding: 32px;
+        background: var(--card);
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+      }
+      header {
+        text-align: center;
+        margin-bottom: 32px;
+      }
+      header h1 {
+        font-size: 2.3rem;
+        font-weight: 700;
+        margin: 0;
+        letter-spacing: 0.01em;
+      }
+      header h2 {
+        font-size: 1.15rem;
+        font-weight: 600;
+        margin: 8px 0 0 0;
+        color: var(--accent);
+      }
+      .subtitle {
+        font-size: 0.97rem;
+        color: var(--subtitle);
+        margin-top: 8px;
+      }
+      main {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+      }
+      .card {
+        background: var(--bg);
+        border-radius: var(--card-radius);
+        padding: 18px 16px;
+        box-shadow: 0 2px 8px rgba(40, 60, 90, 0.07);
+        margin-bottom: 0;
+      }
+      .card h3 {
+        margin: 0 0 8px 0;
+        font-size: 1.13rem;
+        color: var(--primary);
+        font-weight: 600;
+      }
+      .card p, .card ul {
+        margin: 0;
+        font-size: 0.98rem;
+        color: #222;
+      }
+      .card ul {
+        padding-left: 18px;
+      }
+      .contact-link {
+        color: var(--accent);
+        text-decoration: none;
+        font-weight: 600;
+      }
+      .contact-link:hover {
+        text-decoration: underline;
+      }
+      footer {
+        text-align: center;
+        margin-top: 32px;
+        font-size: 0.94rem;
+        color: var(--footer);
+        letter-spacing: 0.01em;
+      }
+      @media (max-width: 600px) {
+        .container {
+          padding: 12px;
+        }
+        header h1 {
+          font-size: 1.5rem;
+        }
+        .card {
+          padding: 14px 8px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Chad Nedin</h1>
+        <h2>Teacher Candidate</h2>
+        <div class="subtitle">
+          Computer Technology · Ontario Secondary School Certification Path
+        </div>
+      </header>
+      <main>
+        <section class="card">
+          <h3>About Me</h3>
+          <p>
+            Aspiring Ontario Secondary School teacher specializing in Computer Technology. Passionate about fostering digital literacy and empowering students with modern skills for a technology-driven world.
+          </p>
+        </section>
+        <section class="card">
+          <h3>My Journey</h3>
+          <ul>
+            <li>Teacher Candidate in Ontario</li>
+            <li>Focused on Computer Technology curriculum</li>
+            <li>Committed to innovative, student-centered learning</li>
+          </ul>
+        </section>
+        <section class="card">
+          <h3>Contact</h3>
+          <p>
+            <a class="contact-link" href="mailto:chadnedin@example.com">chadnedin@example.com</a>
+          </p>
+        </section>
+      </main>
+      <footer>
+        © 2025 Chad Nedin
+      </footer>
+    </div>
+  </body>
+</html>
