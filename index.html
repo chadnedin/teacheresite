@@ -1,210 +1,139 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Chad Nedin | Teacher Candidate</title>
-    <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    <link href="https://fonts.googleapis.com/css?family=Inter:400,600,700&display=swap" rel="stylesheet">
-    <style>
-      :root {
-        --bg: #f3f6fb;
-        --card: #fff;
-        --primary: #2546a6;
-        --accent: #1d9bf0;
-        --subtitle: #7a91c2;
-        --footer: #94a3c8;
-        --shadow: 0 10px 30px rgba(40, 60, 90, 0.10);
-        --radius: 22px;
-        --card-radius: 16px;
-        --divider: #e3eaf5;
-        --highlight: #eaf4ff;
-      }
-      body {
-        margin: 0;
-        font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
-        background: var(--bg);
-        color: #222;
-        transition: background 0.3s;
-      }
-      .container {
-        max-width: 480px;
-        margin: 40px auto 0 auto;
-        padding: 38px 28px 22px 28px;
-        background: var(--card);
-        border-radius: var(--radius);
-        box-shadow: var(--shadow);
-        border: 1px solid var(--divider);
-        position: relative;
-      }
-      header {
-        text-align: center;
-        margin-bottom: 36px;
-        position: relative;
-      }
-      .avatar {
-        width: 64px;
-        height: 64px;
-        margin-bottom: 16px;
-        border-radius: 50%;
-        background: var(--highlight);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-left: auto;
-        margin-right: auto;
-        box-shadow: 0 2px 12px rgba(29, 155, 240, 0.08);
-      }
-      .avatar svg {
-        width: 40px;
-        height: 40px;
-        display: block;
-      }
-      header h1 {
-        font-size: 2.1rem;
-        font-weight: 700;
-        margin: 0;
-        letter-spacing: 0.01em;
-        color: var(--primary);
-      }
-      header h2 {
-        font-size: 1.13rem;
-        font-weight: 600;
-        margin: 10px 0 0 0;
-        color: var(--accent);
-        letter-spacing: 0.02em;
-      }
-      .subtitle {
-        font-size: 1rem;
-        color: var(--subtitle);
-        margin-top: 8px;
-        font-weight: 500;
-      }
-      main {
-        display: flex;
-        flex-direction: column;
-        gap: 22px;
-      }
-      .card {
-        background: var(--highlight);
-        border-radius: var(--card-radius);
-        padding: 22px 18px 18px 18px;
-        box-shadow: 0 2px 8px rgba(40, 60, 90, 0.06);
-        border: 1px solid var(--divider);
-        margin-bottom: 0;
-        transition: box-shadow 0.2s;
-      }
-      .card:hover {
-        box-shadow: 0 4px 16px rgba(29, 155, 240, 0.10);
-        border-color: var(--accent);
-      }
-      .card h3 {
-        margin: 0 0 10px 0;
-        font-size: 1.19rem;
-        color: var(--primary);
-        font-weight: 700;
-        letter-spacing: 0.01em;
-      }
-      .card p, .card ul {
-        margin: 0;
-        font-size: 1.02rem;
-        color: #233;
-        line-height: 1.6;
-      }
-      .card ul {
-        padding-left: 22px;
-      }
-      .contact-link {
-        color: var(--accent);
-        text-decoration: none;
-        font-weight: 600;
-        padding: 2px 4px;
-        border-radius: 5px;
-        transition: background 0.2s;
-      }
-      .contact-link:hover {
-        text-decoration: underline;
-        background: var(--accent);
-        color: #fff;
-      }
-      .divider {
-        width: 80%;
-        height: 1px;
-        background: var(--divider);
-        margin: 28px auto 18px auto;
-        border-radius: 2px;
-      }
-      footer {
-        text-align: center;
-        margin-top: 32px;
-        font-size: 0.97rem;
-        color: var(--footer);
-        letter-spacing: 0.01em;
-        padding-bottom: 4px;
-      }
-      @media (max-width: 600px) {
-        .container {
-          padding: 10px;
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Teacher Candidate E-Portfolio — Chad Nedin</title>
+
+  <!-- Theme preloader: set the initial theme and page background synchronously
+       to avoid white flash when loading pages in dark mode.
+       Reads localStorage 'portfolio-theme' (values: "dark"|"light") or falls back
+       to system preference. -->
+  <script>
+  (function () {
+    try {
+      var stored = null;
+      try { stored = localStorage.getItem('portfolio-theme'); } catch (e) { stored = null; }
+      var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var theme = (stored === 'dark' || stored === 'light') ? stored : (prefersDark ? 'dark' : 'light');
+
+      var darkBg = '#0b1220';
+      var lightBg = '#f7f9fb';
+
+      if (theme === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        document.documentElement.style.backgroundColor = darkBg;
+        var meta = document.querySelector('meta[name="theme-color"]');
+        if (!meta) {
+          meta = document.createElement('meta');
+          meta.name = 'theme-color';
+          document.head.appendChild(meta);
         }
-        .card {
-          padding: 16px 7px;
+        meta.content = darkBg;
+      } else {
+        document.documentElement.removeAttribute('data-theme');
+        document.documentElement.style.backgroundColor = lightBg;
+        var meta = document.querySelector('meta[name="theme-color"]');
+        if (!meta) {
+          meta = document.createElement('meta');
+          meta.name = 'theme-color';
+          document.head.appendChild(meta);
         }
-        header h1 {
-          font-size: 1.3rem;
-        }
-        .avatar {
-          width: 44px;
-          height: 44px;
-        }
-        .avatar svg {
-          width: 28px;
-          height: 28px;
-        }
+        meta.content = lightBg;
       }
-    </style>
-  </head>
-  <body>
-    <div class="container">
-      <header>
-        <div class="avatar">
-          <!-- Inline SVG favicon, matches favicon.svg -->
-          <svg viewBox="0 0 48 48" fill="none">
-            <circle cx="24" cy="24" r="22" fill="#1d9bf0" />
-            <text x="50%" y="56%" text-anchor="middle" font-size="28" fill="#fff" font-family="Inter, Arial" font-weight="700" dy=".3em">C</text>
-          </svg>
-        </div>
-        <h1>Chad Nedin</h1>
-        <h2>Teacher Candidate</h2>
-        <div class="subtitle">
-          Computer Technology · Ontario Secondary School Certification Path
-        </div>
-      </header>
-      <main>
-        <section class="card">
-          <h3>About Me</h3>
-          <p>
-            Aspiring Ontario Secondary School teacher specializing in Computer Technology. Passionate about fostering digital literacy and empowering students with modern skills for a technology-driven world.
-          </p>
-        </section>
-        <section class="card">
-          <h3>My Journey</h3>
-          <ul>
-            <li>Teacher Candidate in Ontario</li>
-            <li>Focused on Computer Technology curriculum</li>
-            <li>Committed to innovative, student-centered learning</li>
-          </ul>
-        </section>
-        <section class="card">
-          <h3>Contact</h3>
-          <p>
-            <a class="contact-link" href="mailto:chadnedin@example.com">chadnedin@example.com</a>
-          </p>
-        </section>
-      </main>
-      <div class="divider"></div>
-      <footer>
-        © 2025 Chad Nedin
-      </footer>
+    } catch (e) { /* silent */ }
+  })();
+  </script>
+
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="icon" href="assets/images/favicon.svg" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <h1 class="brand-title">Chad Nedin</h1>
+        <p class="brand-sub">Teacher Candidate – Bachelor of Education</p>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primaryNav">
+        <span class="hamburger" aria-hidden="true"></span>
+        <span class="sr-only">Toggle navigation</span>
+      </button>
+
+      <nav id="primaryNav" class="primary-nav" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="philosophy.html">Teaching Philosophy</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="artifacts.html">Artifacts</a></li>
+          <li><a href="reflections.html">Reflections</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
     </div>
-  </body>
+  </header>
+
+  <main>
+    <section class="hero container" id="home">
+      <div class="hero-content">
+        <h2 class="hero-title">Reflecting, Learning, Growing as an Educator</h2>
+        <p class="hero-sub">Welcome to my Teacher Candidate E-Portfolio. This site documents my professional growth, showcases artifacts, and houses monthly reflections throughout my education program.</p>
+        <div class="cta-row">
+          <a class="btn primary" href="artifacts.html">View Artifacts</a>
+          <a class="btn ghost" href="reflections.html">Monthly Reflections</a>
+        </div>
+      </div>
+
+      <aside class="hero-aside">
+        <img src="assets/images/headshot-placeholder.svg" alt="Professional headshot placeholder" class="headshot" />
+        <p class="role">Teacher Candidate – Bachelor of Education</p>
+      </aside>
+    </section>
+
+    <section class="highlights container">
+      <h3>Highlights</h3>
+      <div class="grid highlights-grid">
+        <article class="card">
+          <h4>Professional Growth</h4>
+          <p>Documenting progress across lesson planning, classroom management, and assessment practice.</p>
+        </article>
+
+        <article class="card">
+          <h4>Artifacts</h4>
+          <p>Lesson plans, assignments, reflections, in-school activities and letters of support.</p>
+        </article>
+
+        <article class="card">
+          <h4>Reflections</h4>
+          <p>Monthly reflective notes that track learning and areas for further development.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="quick-links container">
+      <h3>Quick Links</h3>
+      <ul class="inline-list">
+        <li><a href="resume.html">Download Resume</a></li>
+        <li><a href="philosophy.html">Teaching Philosophy</a></li>
+        <li><a href="contact.html">Contact Me</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <p>Contact: <a href="mailto:chad@example.com">chad@example.com</a></p>
+        <p><a href="https://linkedin.example" target="_blank" rel="noopener">LinkedIn (placeholder)</a> • <a href="https://github.example" target="_blank" rel="noopener">GitHub (placeholder)</a></p>
+      </div>
+      <div class="copyright">
+        <p>© 2025 Chad Nedin — Teacher Candidate. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
 </html>

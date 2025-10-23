@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Resume — Teacher Candidate E-Portfolio</title>
+
+  <!-- Theme preloader -->
+  <script>
+  (function () {
+    try {
+      var stored = null;
+      try { stored = localStorage.getItem('portfolio-theme'); } catch (e) { stored = null; }
+      var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var theme = (stored === 'dark' || stored === 'light') ? stored : (prefersDark ? 'dark' : 'light');
+
+      var darkBg = '#0b1220';
+      var lightBg = '#f7f9fb';
+
+      if (theme === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        document.documentElement.style.backgroundColor = darkBg;
+        var meta = document.querySelector('meta[name="theme-color"]');
+        if (!meta) { meta = document.createElement('meta'); meta.name = 'theme-color'; document.head.appendChild(meta); }
+        meta.content = darkBg;
+      } else {
+        document.documentElement.removeAttribute('data-theme');
+        document.documentElement.style.backgroundColor = lightBg;
+        var meta = document.querySelector('meta[name="theme-color"]');
+        if (!meta) { meta = document.createElement('meta'); meta.name = 'theme-color'; document.head.appendChild(meta); }
+        meta.content = lightBg;
+      }
+    } catch (e) { /* silent */ }
+  })();
+  </script>
+
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="icon" href="assets/images/favicon.svg" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <h1 class="brand-title">Chad Nedin</h1>
+      </a>
+
+      <nav class="primary-nav" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="philosophy.html">Teaching Philosophy</a></li>
+          <li><a href="resume.html" class="active">Resume</a></li>
+          <li><a href="artifacts.html">Artifacts</a></li>
+          <li><a href="reflections.html">Reflections</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <article class="card resume">
+      <header class="resume-header">
+        <h2>Chad Nedin</h2>
+        <p>Teacher Candidate – Bachelor of Education</p>
+        <div class="resume-actions">
+          <a class="btn primary" href="assets/resume.pdf" download>Download Resume (PDF)</a>
+          <a class="btn ghost" href="contact.html">Contact Me</a>
+        </div>
+      </header>
+
+      <section>
+        <h3>Education</h3>
+        <ul>
+          <li>Bachelor of Education — Placeholder University (Expected 2025)</li>
+          <li>Bachelor of Arts — Placeholder University (Year)</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>Teaching Experience / Practicum</h3>
+        <ul>
+          <li>Elementary Practicum — Placement School (Term/Year) — Responsibilities: lesson planning, small-group instruction, assessment</li>
+          <li>Volunteer Tutor — Literacy Program — (Year)</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>Certifications</h3>
+        <ul>
+          <li>Working with Children Check (placeholder)</li>
+          <li>First Aid / CPR (placeholder)</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>Skills</h3>
+        <p>Lesson planning, classroom management, formative assessment, blended learning, Google Workspace for Education, basic HTML/CSS, collaborative planning.</p>
+      </section>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2025 Chad Nedin</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

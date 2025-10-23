@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>About — Teacher Candidate E-Portfolio</title>
+
+  <!-- Theme preloader: set the initial theme and page background synchronously -->
+  <script>
+  (function () {
+    try {
+      var stored = null;
+      try { stored = localStorage.getItem('portfolio-theme'); } catch (e) { stored = null; }
+      var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var theme = (stored === 'dark' || stored === 'light') ? stored : (prefersDark ? 'dark' : 'light');
+
+      var darkBg = '#0b1220';
+      var lightBg = '#f7f9fb';
+
+      if (theme === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        document.documentElement.style.backgroundColor = darkBg;
+        var meta = document.querySelector('meta[name="theme-color"]');
+        if (!meta) { meta = document.createElement('meta'); meta.name = 'theme-color'; document.head.appendChild(meta); }
+        meta.content = darkBg;
+      } else {
+        document.documentElement.removeAttribute('data-theme');
+        document.documentElement.style.backgroundColor = lightBg;
+        var meta = document.querySelector('meta[name="theme-color"]');
+        if (!meta) { meta = document.createElement('meta'); meta.name = 'theme-color'; document.head.appendChild(meta); }
+        meta.content = lightBg;
+      }
+    } catch (e) { /* silent */ }
+  })();
+  </script>
+
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="icon" href="assets/images/favicon.svg" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <h1 class="brand-title">Chad Nedin</h1>
+        <p class="brand-sub">Teacher Candidate – Bachelor of Education</p>
+      </a>
+
+      <button class="nav-toggle" id="navToggleTop" aria-expanded="false" aria-controls="primaryNavTop">
+        <span class="hamburger" aria-hidden="true"></span>
+        <span class="sr-only">Toggle navigation</span>
+      </button>
+
+      <nav id="primaryNavTop" class="primary-nav" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" class="active">About</a></li>
+          <li><a href="philosophy.html">Teaching Philosophy</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="artifacts.html">Artifacts</a></li>
+          <li><a href="reflections.html">Reflections</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="about-top">
+      <div class="about-grid">
+        <div>
+          <h2>About Me</h2>
+          <p class="muted">Short biography (placeholder)</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae lacus ut risus viverra cursus. Curabitur egestas, lorem at commodo convallis, magna lorem luctus mi, sed interdum urna erat id nibh. This is placeholder text you can replace with your biography describing background, teaching interests, and motivations for becoming an educator.</p>
+        </div>
+
+        <aside class="about-aside">
+          <img src="assets/images/headshot-placeholder.svg" alt="Professional headshot placeholder" class="headshot large" />
+          <p class="caption">Professional headshot placeholder — replace with your photo</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="teaching-philosophy-preview card">
+      <h3>Teaching Philosophy (Preview)</h3>
+      <p>Sample philosophy: I believe that learning is active, collaborative, and student-centred. My role is to build trusting relationships, design meaningful learning tasks, and use assessment for learning to support every student's growth.</p>
+      <a class="btn" href="philosophy.html">Read Full Teaching Philosophy</a>
+    </section>
+
+    <section class="education-goals grid-2">
+      <div class="card">
+        <h3>Educational Background</h3>
+        <ul>
+          <li>Bachelor of Education — Placeholder University, 2025</li>
+          <li>Working with Children Check / Teaching Practicum — (placeholder)</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Professional Goals</h3>
+        <ol>
+          <li>Develop culturally responsive lessons</li>
+          <li>Integrate technology to enhance learning objectives</li>
+          <li>Build strong classroom communities and assessment practices</li>
+        </ol>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <p>Contact: <a href="mailto:chad@example.com">chad@example.com</a></p>
+      </div>
+      <div class="copyright">
+        <p>© 2025 Chad Nedin</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

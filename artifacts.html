@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Artifacts — Teacher Candidate E-Portfolio</title>
+
+  <!-- Theme preloader -->
+  <script>
+  (function () {
+    try {
+      var stored = null;
+      try { stored = localStorage.getItem('portfolio-theme'); } catch (e) { stored = null; }
+      var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var theme = (stored === 'dark' || stored === 'light') ? stored : (prefersDark ? 'dark' : 'light');
+
+      var darkBg = '#0b1220';
+      var lightBg = '#f7f9fb';
+
+      if (theme === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        document.documentElement.style.backgroundColor = darkBg;
+        var meta = document.querySelector('meta[name="theme-color"]');
+        if (!meta) { meta = document.createElement('meta'); meta.name = 'theme-color'; document.head.appendChild(meta); }
+        meta.content = darkBg;
+      } else {
+        document.documentElement.removeAttribute('data-theme');
+        document.documentElement.style.backgroundColor = lightBg;
+        var meta = document.querySelector('meta[name="theme-color"]');
+        if (!meta) { meta = document.createElement('meta'); meta.name = 'theme-color'; document.head.appendChild(meta); }
+        meta.content = lightBg;
+      }
+    } catch (e) { /* silent */ }
+  })();
+  </script>
+
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="icon" href="assets/images/favicon.svg" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <h1 class="brand-title">Chad Nedin</h1>
+      </a>
+
+      <nav class="primary-nav" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="philosophy.html">Teaching Philosophy</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="artifacts.html" class="active">Artifacts</a></li>
+          <li><a href="reflections.html">Reflections</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="artifacts-intro">
+      <h2>Artifacts</h2>
+      <p>A curated collection of lesson plans, assignments, in-school activities, reflections and letters of support. Click an artifact to view or download. These are placeholders you can replace.</p>
+
+      <nav class="artifact-subnav">
+        <a href="#lesson-plans">Lesson Plans & Assignments</a>
+        <a href="#reflections">Reflections & Updates</a>
+        <a href="#in-school">In-School Activities</a>
+        <a href="#letters">Letters of Support</a>
+      </nav>
+    </section>
+
+    <section id="lesson-plans" class="artifact-section">
+      <h3>Lesson Plans & Assignments</h3>
+      <div class="grid artifacts-grid">
+        <article class="artifact-card">
+          <img src="assets/images/artifact1.svg" data-full="assets/images/artifact1.svg" alt="Lesson Plan thumbnail: Digital Citizenship" class="artifact-thumb" />
+          <h4>Lesson Plan on Digital Citizenship</h4>
+          <p>Type: Assignment — Reflection: Focus on safe online behaviour, privacy and respectful communication.</p>
+          <div class="artifact-actions">
+            <a class="btn small" href="assets/artifact1.pdf" download>Download</a>
+            <a class="btn small ghost" href="#">View Details</a>
+          </div>
+        </article>
+
+        <article class="artifact-card">
+          <img src="assets/images/artifact2.svg" data-full="assets/images/artifact2.svg" alt="Assignment thumbnail: Math Fractions" class="artifact-thumb" />
+          <h4>Math Lesson: Fractions</h4>
+          <p>Type: Lesson Plan — Reflection: Scaffolded activities using manipulatives and formative checks.</p>
+          <div class="artifact-actions">
+            <a class="btn small" href="assets/artifact2.pdf" download>Download</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="reflections" class="artifact-section">
+      <h3>Reflections & Monthly Updates</h3>
+      <div class="grid artifacts-grid">
+        <article class="artifact-card">
+          <h4>October 2025 — Website Setup</h4>
+          <p>Type: Reflection — Website created and sample artifacts collected.</p>
+          <div class="artifact-actions">
+            <a class="btn small" href="reflections.html">Open Monthly Reflections</a>
+          </div>
+        </article>
+
+        <article class="artifact-card">
+          <h4>December 2025 — Early Practicum Notes</h4>
+          <p>Type: Reflection — Observations from in-school visits and initial teaching attempts.</p>
+          <div class="artifact-actions">
+            <a class="btn small" href="#">View</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="in-school" class="artifact-section">
+      <h3>In-School Activities</h3>
+      <div class="grid artifacts-grid">
+        <article class="artifact-card">
+          <h4>Classroom Observation Log</h4>
+          <p>Type: In-school activity — Notes and strategies observed during placement.</p>
+          <div class="artifact-actions">
+            <a class="btn small" href="assets/artifact3.pdf" download>Download</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="letters" class="artifact-section">
+      <h3>Letters of Support / Recommendations</h3>
+      <div class="grid artifacts-grid">
+        <article class="artifact-card">
+          <h4>Letter of Support — Mentor Teacher</h4>
+          <p>Type: Recommendation — Positive feedback on classroom practice and relationships with students.</p>
+          <div class="artifact-actions">
+            <a class="btn small" href="assets/letter1.pdf" download>Download</a>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2025 Chad Nedin</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
