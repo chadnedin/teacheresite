@@ -30,13 +30,16 @@
 html,body{height:100%}
 body{
   margin:0;
-  background:var(--bg);
+  background:var(--bg) url('../images/background_light.png') no-repeat center/cover;
   color:var(--text);
   line-height:1.5;
   -webkit-font-smoothing:antialiased;
   -moz-osx-font-smoothing:grayscale;
   font-size:16px;
   transition: background-color 260ms ease, color 260ms ease;
+}
+:root[data-theme="dark"] body{
+  background:var(--bg) url('../images/background_dark.png') no-repeat center/cover;
 }
 
 /* Layout helpers */
@@ -48,7 +51,8 @@ body{
 
 /* Header */
 .site-header{
-  background:linear-gradient(180deg, rgba(255,255,255,0.6), rgba(255,255,255,0.9));
+  background:linear-gradient(180deg, rgba(255,255,255,0.6), rgba(255,255,255,0.9)), url('../images/navbar_background_light.png') no-repeat center/cover;
+  background-blend-mode: overlay;
   border-bottom:1px solid rgba(15,23,42,0.04);
   position:sticky;
   top:0;
@@ -57,7 +61,8 @@ body{
   transition: background-color 260ms ease, border-color 260ms ease;
 }
 :root[data-theme="dark"] .site-header {
-  background: linear-gradient(180deg, rgba(15,23,42,0.65), rgba(15,23,42,0.85));
+  background: linear-gradient(180deg, rgba(15,23,42,0.65), rgba(15,23,42,0.85)), url('../images/navbar_background_dark.png') no-repeat center/cover;
+  background-blend-mode: overlay;
   border-bottom:1px solid rgba(255,255,255,0.04);
 }
 
