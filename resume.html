@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Resume — Teacher Candidate E-Portfolio</title>
+
+  <!-- Theme preloader -->
+  <script>
+  (function () {
+    try {
+      var stored = null;
+      try { stored = localStorage.getItem('portfolio-theme'); } catch (e) { stored = null; }
+      var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var theme = (stored === 'dark' || stored === 'light') ? stored : (prefersDark ? 'dark' : 'light');
+
+      var darkBg = '#0f1e17';
+      var lightBg = '#f8f5ec';
+
+      if (theme === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        document.documentElement.style.backgroundColor = darkBg;
+        var meta = document.querySelector('meta[name="theme-color"]');
+        if (!meta) { meta = document.createElement('meta'); meta.name = 'theme-color'; document.head.appendChild(meta); }
+        meta.content = darkBg;
+      } else {
+        document.documentElement.removeAttribute('data-theme');
+        document.documentElement.style.backgroundColor = lightBg;
+        var meta = document.querySelector('meta[name="theme-color"]');
+        if (!meta) { meta = document.createElement('meta'); meta.name = 'theme-color'; document.head.appendChild(meta); }
+        meta.content = lightBg;
+      }
+    } catch (e) { /* silent */ }
+  })();
+  </script>
+
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="icon" href="assets/images/favicon.svg" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <h1 class="brand-title">Chad Nedin</h1>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primaryNav">
+        <span class="hamburger" aria-hidden="true"></span>
+        <span class="sr-only">Toggle navigation</span>
+      </button>
+
+      <nav id="primaryNav" class="primary-nav" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="philosophy.html">Teaching Philosophy</a></li>
+          <li><a href="resume.html" class="active">Resume</a></li>
+          <li><a href="artifacts.html">Artifacts</a></li>
+          <li><a href="reflections.html">Reflections</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <article class="resume">
+      <header class="resume-header card">
+        <div>
+          <h2>Resume — Chad Nedin</h2>
+          <p class="muted">Teacher Candidate in Technological Education (Computer Technology, Grades 9–12)</p>
+        </div>
+        <div class="resume-actions">
+          <a class="btn primary" href="assets/resume.pdf" download>Download Resume (PDF)</a>
+          <a class="btn ghost" href="contact.html">Contact Me</a>
+        </div>
+      </header>
+
+      <div class="resume-layout">
+        <aside class="resume-sidebar card">
+          <section class="resume-section">
+            <h3>Professional Summary</h3>
+            <p>Teacher Candidate in Technological Education (Computer Technology, Grades 9–12) with a strong background in applied research, IT project coordination, and postsecondary teaching support. Former IT & Communication Research Centre Coordinator with over six years of experience leading industry–academic projects, mentoring students, and translating complex technical concepts into practical learning experiences. Committed to inclusive, hands-on, and cross-curricular technology education that builds student confidence, digital literacy, and real-world problem-solving skills.</p>
+          </section>
+
+          <section class="resume-section">
+            <h3>Certifications</h3>
+            <ul class="bullets">
+              <li>CompTIA A+</li>
+              <li>RPAS (Remotely Piloted Aircraft Systems)</li>
+              <li>Mental Health Support with Youth Certificate</li>
+            </ul>
+          </section>
+
+          <section class="resume-section">
+            <h3>Core Skills & Competencies</h3>
+            <div class="skills-grid">
+              <div>
+                <h4>Teaching & Pedagogy</h4>
+                <ul class="bullets">
+                  <li>Lesson planning & curriculum alignment</li>
+                  <li>Differentiated instruction</li>
+                  <li>Classroom management</li>
+                  <li>Reflective practice</li>
+                  <li>Cross-curricular integration (Tech, Literacy, Numeracy)</li>
+                </ul>
+              </div>
+              <div>
+                <h4>Technology & Technical Skills</h4>
+                <ul class="bullets">
+                  <li>Programming & software development</li>
+                  <li>Database design (SQL, ERDs)</li>
+                  <li>Educational technology integration</li>
+                  <li>Applied research & prototyping</li>
+                  <li>Project coordination & documentation</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+        </aside>
+
+        <div class="resume-main">
+          <section class="resume-section card">
+            <h3>Education</h3>
+            <div class="item">
+              <h4>Bachelor of Education (B.Ed.) – Technological Education (Computer Technology, Grades 9–12)</h4>
+              <p class="meta">University of Windsor | 2025–2026 (In Progress)</p>
+              <ul class="bullets">
+                <li>Curriculum and assessment design for Grades 9–12 Technological Education</li>
+                <li>Lesson development with emphasis on digital literacy, numeracy, and experiential learning</li>
+                <li>Practicum placement at St. Patrick’s Catholic High School (Sarnia)</li>
+                <li>Courses taught: ICS3C, TAS1O, MBF3C</li>
+              </ul>
+            </div>
+
+            <div class="item">
+              <h4>Diploma – Computer Programming</h4>
+              <p class="meta">Lambton College | 2015–2017</p>
+              <ul class="bullets">
+                <li>Software Development & Object-Oriented Programming</li>
+                <li>Database Design & Management (SQL, ERDs)</li>
+                <li>Web & Mobile Application Development</li>
+                <li>Systems Analysis & Design</li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="resume-section card">
+            <h3>Teaching & Educational Experience</h3>
+            <div class="item">
+              <h4>Teacher Candidate — Practicum Placement</h4>
+              <p class="meta">St. Patrick’s Catholic High School (Sarnia)</p>
+              <ul class="bullets">
+                <li>Planned and delivered lessons in Computer Science, Exploring Technologies, and Mathematics</li>
+                <li>Developed classroom management strategies and differentiated instruction</li>
+                <li>Integrated technology, literacy, and numeracy in applied learning environments</li>
+                <li>Reflected on teaching practice through formative feedback and observation</li>
+              </ul>
+            </div>
+
+            <div class="item">
+              <h4>Teaching Assistant — Computer Programming</h4>
+              <p class="meta">Lambton College | Sep 2016 – Apr 2017</p>
+              <ul class="bullets">
+                <li>Supported instruction in programming, databases, and IT infrastructure</li>
+                <li>Facilitated labs and provided one-on-one student support</li>
+                <li>Assisted with software tools, licensing, and technical troubleshooting</li>
+                <li>Supported student project development and database ERD design</li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="resume-section card">
+            <h3>Professional & Industry Experience</h3>
+            <div class="item">
+              <h4>IT & Communication Research Centre (ITCRC) Coordinator</h4>
+              <p class="meta">Lambton College – Research & Innovation | Apr 2018 – Sep 2024</p>
+              <ul class="bullets">
+                <li>Directed applied research projects connecting industry partners with academic teams</li>
+                <li>Led cross-functional teams of students, faculty, and technical staff</li>
+                <li>Managed project lifecycles from scoping to delivery</li>
+                <li>Prepared successful funding applications (NSERC, OCI, MITACS)</li>
+                <li>Supported SMEs in digital transformation and technology adoption</li>
+                <li>Oversaw technical documentation, reporting, and prototype development</li>
+              </ul>
+            </div>
+
+            <div class="item">
+              <h4>IT Researcher — Lambton Water Research Centre</h4>
+              <p class="meta">Lambton College | May 2017 – Apr 2018</p>
+              <ul class="bullets">
+                <li>Conducted applied research supporting water treatment and environmental monitoring technologies</li>
+                <li>Collaborated with interdisciplinary research teams</li>
+                <li>Prepared technical reports, proposals, and research documentation</li>
+              </ul>
+            </div>
+          </section>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2025 Chad Nedin</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

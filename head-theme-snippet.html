@@ -1,0 +1,44 @@
+<!-- Put this BEFORE your <link rel="stylesheet" href="assets/css/style.css"> in every HTML head -->
+<script>
+/* Theme preloader: set the initial theme and page background synchronously
+   to avoid white flash when loading pages in dark mode.
+   Reads localStorage 'portfolio-theme' (values: "dark"|"light") or falls back
+   to system preference. */
+(function () {
+  try {
+    var stored = null;
+    try { stored = localStorage.getItem('portfolio-theme'); } catch (e) { stored = null; }
+    var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    var theme = (stored === 'dark' || stored === 'light') ? stored : (prefersDark ? 'dark' : 'light');
+
+    // Colors should match your CSS variables for smooth transition
+    var darkBg = '#0f1e17';   // same value as --bg in dark :root
+    var lightBg = '#f8f5ec';  // same value as --bg in light :root
+
+    if (theme === 'dark') {
+      document.documentElement.setAttribute('data-theme', 'dark');
+      document.documentElement.style.backgroundColor = darkBg;
+      // set mobile toolbar / theme color
+      var meta = document.querySelector('meta[name="theme-color"]');
+      if (!meta) {
+        meta = document.createElement('meta');
+        meta.name = 'theme-color';
+        document.head.appendChild(meta);
+      }
+      meta.content = darkBg;
+    } else {
+      document.documentElement.removeAttribute('data-theme');
+      document.documentElement.style.backgroundColor = lightBg;
+      var meta = document.querySelector('meta[name="theme-color"]');
+      if (!meta) {
+        meta = document.createElement('meta');
+        meta.name = 'theme-color';
+        document.head.appendChild(meta);
+      }
+      meta.content = lightBg;
+    }
+  } catch (e) {
+    /* silent fail: nothing critical */
+  }
+})();
+</script>

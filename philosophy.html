@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Teaching Philosophy — Teacher Candidate E-Portfolio</title>
+
+  <!-- Theme preloader -->
+  <script>
+  (function () {
+    try {
+      var stored = null;
+      try { stored = localStorage.getItem('portfolio-theme'); } catch (e) { stored = null; }
+      var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var theme = (stored === 'dark' || stored === 'light') ? stored : (prefersDark ? 'dark' : 'light');
+
+      var darkBg = '#0f1e17';
+      var lightBg = '#f8f5ec';
+
+      if (theme === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        document.documentElement.style.backgroundColor = darkBg;
+        var meta = document.querySelector('meta[name="theme-color"]');
+        if (!meta) { meta = document.createElement('meta'); meta.name = 'theme-color'; document.head.appendChild(meta); }
+        meta.content = darkBg;
+      } else {
+        document.documentElement.removeAttribute('data-theme');
+        document.documentElement.style.backgroundColor = lightBg;
+        var meta = document.querySelector('meta[name="theme-color"]');
+        if (!meta) { meta = document.createElement('meta'); meta.name = 'theme-color'; document.head.appendChild(meta); }
+        meta.content = lightBg;
+      }
+    } catch (e) { /* silent */ }
+  })();
+  </script>
+
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="icon" href="assets/images/favicon.svg" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <h1 class="brand-title">Chad Nedin</h1>
+        <p class="brand-sub">Teacher Candidate – Bachelor of Education</p>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primaryNav">
+        <span class="hamburger" aria-hidden="true"></span>
+        <span class="sr-only">Toggle navigation</span>
+      </button>
+
+      <nav id="primaryNav" class="primary-nav" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="philosophy.html" class="active">Teaching Philosophy</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="artifacts.html">Artifacts</a></li>
+          <li><a href="reflections.html">Reflections</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <article class="card">
+      <h2>My Teaching Philosophy</h2>
+
+      <section>
+        <h3>Beliefs about Learning</h3>
+        <p>I believe students learn best through curiosity, experimentation, and persistence. Learning happens when they’re encouraged to explore, make mistakes, and discover solutions through guided practice. Like when I built my first PC at age 12, with minimal instructions but lots of problem-solving, I want my students to experience that same sense of accomplishment that comes from figuring things out for themselves. My role is to provide support, context, and encouragement without taking over their learning process.</p>
+      </section>
+
+      <section>
+        <h3>Classroom Environment</h3>
+        <p>I aim to create a calm, organized, and welcoming space where students feel safe to take risks and explore ideas. Structure, fairness, and empathy are key. Each student’s path is different, some need more guidance, others just need reassurance to explore independently. My classroom encourages persistence over perfection and values growth through effort and reflection.</p>
+      </section>
+
+      <section>
+        <h3>Use of Technology in Education</h3>
+        <p>Technology should empower creativity, problem-solving, and hands-on learning. I use it as a tool for exploration, whether students are programming sensors, designing media projects, or testing real-world solutions. I want them to see technology not as a set of instructions to follow, but as a set of tools they can learn to master through curiosity and experimentation.</p>
+      </section>
+
+      <section>
+        <h3>Inclusivity and Equity</h3>
+        <p>Every learner deserves to feel valued and capable. I strive to meet students where they are, adapting instruction to individual strengths and needs. Fairness means providing equitable opportunities for success while encouraging students to take ownership of their learning. As both a teacher and a parent, I’ve learned that patience, encouragement, and understanding go a long way in helping students thrive.</p>
+      </section>
+
+      <section>
+        <h3>Reflection: How My Philosophy Has Evolved</h3>
+        <p>My philosophy has evolved from seeing teaching as delivering content to viewing it as guiding discovery. Through this program and my professional experiences, I’ve come to see the greatest learning moments happen when students are supported but not handed the answers. I now focus more on building confidence, curiosity, and resilience, the same qualities that shaped my own journey as a lifelong learner.</p>
+        <textarea class="reflection-box" placeholder="Add your reflection on how your philosophy has changed..."></textarea>
+      </section>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2025 Chad Nedin</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

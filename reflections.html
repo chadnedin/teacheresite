@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Reflections — Teacher Candidate E-Portfolio</title>
+
+  <!-- Theme preloader -->
+  <script>
+  (function () {
+    try {
+      var stored = null;
+      try { stored = localStorage.getItem('portfolio-theme'); } catch (e) { stored = null; }
+      var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var theme = (stored === 'dark' || stored === 'light') ? stored : (prefersDark ? 'dark' : 'light');
+
+      var darkBg = '#0f1e17';
+      var lightBg = '#f8f5ec';
+
+      if (theme === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        document.documentElement.style.backgroundColor = darkBg;
+        var meta = document.querySelector('meta[name="theme-color"]');
+        if (!meta) { meta = document.createElement('meta'); meta.name = 'theme-color'; document.head.appendChild(meta); }
+        meta.content = darkBg;
+      } else {
+        document.documentElement.removeAttribute('data-theme');
+        document.documentElement.style.backgroundColor = lightBg;
+        var meta = document.querySelector('meta[name="theme-color"]');
+        if (!meta) { meta = document.createElement('meta'); meta.name = 'theme-color'; document.head.appendChild(meta); }
+        meta.content = lightBg;
+      }
+    } catch (e) { /* silent */ }
+  })();
+  </script>
+
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="icon" href="assets/images/favicon.svg" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <h1 class="brand-title">Chad Nedin</h1>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primaryNav">
+        <span class="hamburger" aria-hidden="true"></span>
+        <span class="sr-only">Toggle navigation</span>
+      </button>
+
+      <nav id="primaryNav" class="primary-nav" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="philosophy.html">Teaching Philosophy</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="artifacts.html">Artifacts</a></li>
+          <li><a href="reflections.html" class="active">Reflections</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h2>Monthly Reflections Timeline</h2>
+
+    <table class="reflections-table">
+      <thead>
+        <tr>
+          <th>Month / Year</th>
+          <th>Summary</th>
+          <th>Your Reflection</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>October 2025</td>
+          <td>Website setup and examples of artifacts collected</td>
+          <td><textarea placeholder="Add your October 2025 reflection..."></textarea></td>
+        </tr>
+
+        <tr>
+          <td>December 2025</td>
+          <td>Artifacts, in-school activities, early reflections</td>
+          <td><textarea placeholder="Add your December 2025 reflection..."></textarea></td>
+        </tr>
+
+        <tr>
+          <td>January 2026</td>
+          <td>Layout finalized, About Me finalized</td>
+          <td><textarea placeholder="Add your January 2026 reflection..."></textarea></td>
+        </tr>
+
+        <tr>
+          <td>February 2026</td>
+          <td>Artifact descriptors and resume finalized</td>
+          <td><textarea placeholder="Add your February 2026 reflection..."></textarea></td>
+        </tr>
+
+        <tr>
+          <td>March 2026</td>
+          <td>Near-final reflections and growth summary</td>
+          <td><textarea placeholder="Add your March 2026 reflection..."></textarea></td>
+        </tr>
+
+        <tr>
+          <td>April 2026</td>
+          <td>Final edition and defense preparation</td>
+          <td><textarea placeholder="Add your April 2026 reflection..."></textarea></td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2025 Chad Nedin</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

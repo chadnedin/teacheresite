@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="360" viewBox="0 0 600 360">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1">
+      <stop offset="0" stop-color="#8aa6ff" />
+      <stop offset="1" stop-color="#4b7bec" />
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#g)"/>
+  <g fill="#fff" font-family="sans-serif">
+    <rect x="28" y="24" width="544" height="312" rx="12" fill="rgba(255,255,255,0.06)"/>
+    <text x="40" y="80" font-size="22">Lesson Plan</text>
+    <text x="40" y="115" font-size="14" fill="rgba(255,255,255,0.9)">Digital Citizenship — placeholder thumbnail</text>
+  </g>
+</svg>

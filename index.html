@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Teacher Candidate E-Portfolio — Chad Nedin</title>
+
+  <!-- Theme preloader: set the initial theme and page background synchronously
+       to avoid white flash when loading pages in dark mode.
+       Reads localStorage 'portfolio-theme' (values: "dark"|"light") or falls back
+       to system preference. -->
+  <script>
+  (function () {
+    try {
+      var stored = null;
+      try { stored = localStorage.getItem('portfolio-theme'); } catch (e) { stored = null; }
+      var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var theme = (stored === 'dark' || stored === 'light') ? stored : (prefersDark ? 'dark' : 'light');
+
+      var darkBg = '#0f1e17';
+      var lightBg = '#f8f5ec';
+
+      if (theme === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        document.documentElement.style.backgroundColor = darkBg;
+        var meta = document.querySelector('meta[name="theme-color"]');
+        if (!meta) {
+          meta = document.createElement('meta');
+          meta.name = 'theme-color';
+          document.head.appendChild(meta);
+        }
+        meta.content = darkBg;
+      } else {
+        document.documentElement.removeAttribute('data-theme');
+        document.documentElement.style.backgroundColor = lightBg;
+        var meta = document.querySelector('meta[name="theme-color"]');
+        if (!meta) {
+          meta = document.createElement('meta');
+          meta.name = 'theme-color';
+          document.head.appendChild(meta);
+        }
+        meta.content = lightBg;
+      }
+    } catch (e) { /* silent */ }
+  })();
+  </script>
+
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="icon" href="assets/images/favicon.svg" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <h1 class="brand-title">Chad Nedin</h1>
+        <p class="brand-sub">Teacher Candidate – Bachelor of Education</p>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primaryNav">
+        <span class="hamburger" aria-hidden="true"></span>
+        <span class="sr-only">Toggle navigation</span>
+      </button>
+
+      <nav id="primaryNav" class="primary-nav" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="philosophy.html">Teaching Philosophy</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="artifacts.html">Artifacts</a></li>
+          <li><a href="reflections.html">Reflections</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero container" id="home">
+      <div class="hero-content">
+        <h2 class="hero-title">Reflecting, Learning, Growing as an Educator</h2>
+        <p class="hero-sub">Welcome to my Teacher Candidate E-Portfolio. This site documents my professional growth, showcases artifacts, and houses monthly reflections throughout my education program.</p>
+        <div class="cta-row">
+          <a class="btn primary" href="artifacts.html">View Artifacts</a>
+          <a class="btn ghost" href="reflections.html">Monthly Reflections</a>
+        </div>
+      </div>
+
+      <aside class="hero-aside">
+        <img src="assets/images/headshot-placeholder.svg" alt="Professional headshot placeholder" class="headshot" />
+        <p class="role">Teacher Candidate – Bachelor of Education</p>
+      </aside>
+    </section>
+
+    <section class="highlights container">
+      <h3>Highlights</h3>
+      <div class="grid highlights-grid">
+        <article class="card">
+          <h4>Professional Growth</h4>
+          <p>Documenting progress across lesson planning, classroom management, and assessment practice.</p>
+        </article>
+
+        <article class="card">
+          <h4>Artifacts</h4>
+          <p>Lesson plans, assignments, reflections, in-school activities and letters of support.</p>
+        </article>
+
+        <article class="card">
+          <h4>Reflections</h4>
+          <p>Monthly reflective notes that track learning and areas for further development.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="quick-links container">
+      <h3>Quick Links</h3>
+      <ul class="inline-list">
+        <li><a href="resume.html">Download Resume</a></li>
+        <li><a href="philosophy.html">Teaching Philosophy</a></li>
+        <li><a href="contact.html">Contact Me</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <p>Contact: <a href="mailto:chadnedin@gmail.com">chadnedin@gmail.com</a></p>
+        <p><a href="https://linkedin.example" target="_blank" rel="noopener">LinkedIn (placeholder)</a> • <a href="https://github.example" target="_blank" rel="noopener">GitHub (placeholder)</a></p>
+      </div>
+      <div class="copyright">
+        <p>© 2025 Chad Nedin — Teacher Candidate. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

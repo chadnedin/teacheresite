@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact — Teacher Candidate E-Portfolio</title>
+
+  <!-- Theme preloader -->
+  <script>
+  (function () {
+    try {
+      var stored = null;
+      try { stored = localStorage.getItem('portfolio-theme'); } catch (e) { stored = null; }
+      var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var theme = (stored === 'dark' || stored === 'light') ? stored : (prefersDark ? 'dark' : 'light');
+
+      var darkBg = '#0f1e17';
+      var lightBg = '#f8f5ec';
+
+      if (theme === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        document.documentElement.style.backgroundColor = darkBg;
+        var meta = document.querySelector('meta[name="theme-color"]');
+        if (!meta) { meta = document.createElement('meta'); meta.name = 'theme-color'; document.head.appendChild(meta); }
+        meta.content = darkBg;
+      } else {
+        document.documentElement.removeAttribute('data-theme');
+        document.documentElement.style.backgroundColor = lightBg;
+        var meta = document.querySelector('meta[name="theme-color"]');
+        if (!meta) { meta = document.createElement('meta'); meta.name = 'theme-color'; document.head.appendChild(meta); }
+        meta.content = lightBg;
+      }
+    } catch (e) { /* silent */ }
+  })();
+  </script>
+
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="icon" href="assets/images/favicon.svg" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <h1 class="brand-title">Chad Nedin</h1>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primaryNav">
+        <span class="hamburger" aria-hidden="true"></span>
+        <span class="sr-only">Toggle navigation</span>
+      </button>
+
+      <nav id="primaryNav" class="primary-nav" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="philosophy.html">Teaching Philosophy</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="artifacts.html">Artifacts</a></li>
+          <li><a href="reflections.html">Reflections</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card contact-card">
+      <h2>Contact Me</h2>
+      <form id="contactForm" class="contact-form" action="mailto:chadnedin@gmail.com" method="post" enctype="text/plain">
+        <label for="name">Name</label>
+        <input id="name" name="name" required placeholder="Your name" />
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required placeholder="you@example.com" />
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="6" required placeholder="Write your message here..."></textarea>
+
+        <div class="form-actions">
+          <button class="btn primary" type="submit">Send</button>
+          <button class="btn ghost" type="reset">Reset</button>
+        </div>
+      </form>
+
+      <div class="contact-info">
+        <h3>Get in Touch</h3>
+        <p class="contact-email">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:middle;margin-right:8px;">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+            <polyline points="22,6 12,13 2,6"></polyline>
+          </svg>
+          <a href="mailto:chadnedin@gmail.com">chadnedin@gmail.com</a>
+        </p>
+        <a href="https://www.linkedin.com/in/chad-nedin-417605a4/" target="_blank" rel="noopener" class="btn linkedin-btn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle;margin-right:8px;">
+            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+          </svg>
+          Connect on LinkedIn
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2025 Chad Nedin</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
