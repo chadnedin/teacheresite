@@ -28,31 +28,33 @@
 }
 
 *{box-sizing:border-box}
-html,body{height:100%}
-body{
-  margin:0;
+html{
   background-color: var(--bg);
   background-image: url('../images/background_light.png');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   background-attachment: scroll;
-  min-height: 100vh;
+  height:100%;
+}
+html,body{height:100%}
+body{
+  margin:0;
+  background:transparent;
   color:var(--text);
-  line-height:1.5;
+  line-height:1.6;
   -webkit-font-smoothing:antialiased;
   -moz-osx-font-smoothing:grayscale;
   font-size:16px;
-  transition: background-color 260ms ease, color 260ms ease;
+  transition: color 260ms ease;
 }
-:root[data-theme="dark"] body{
+:root[data-theme="dark"] html{
   background-color: var(--bg);
   background-image: url('../images/background_dark.png');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   background-attachment: scroll;
-  min-height: 100vh;
 }
 
 /* Layout helpers */
