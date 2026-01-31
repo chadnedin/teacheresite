@@ -173,6 +173,22 @@ body{
 .inline-list{ list-style:none; padding:0; margin:0; display:flex; gap:1rem; }
 .inline-list a{ color:var(--accent); text-decoration:none; }
 
+/* Video section */
+.video-section .section-sub{ color:var(--muted); margin-top:0; }
+.video-embed{
+  position:relative;
+  padding-top:56.25%;
+  overflow:hidden;
+}
+.video-embed iframe{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  border:0;
+  border-radius:8px;
+}
+
 /* Artifacts */
 .artifacts-grid{ grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
 .artifact-card{ padding:1rem; border-radius:10px; background:linear-gradient(180deg,#fff,#fbfdff); border:1px solid rgba(15,23,42,0.04); }
