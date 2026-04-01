@@ -38,6 +38,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+  <script defer src="https://pyscript.net/latest/pyscript.js"></script>
   <link rel="icon" href="assets/images/favicon.svg" />
 </head>
 <body>
@@ -193,6 +195,22 @@
       <article class="artifact-card">
         <h4>Python Programming</h4>
         <p>Beginner-friendly Python session: variables, loops, and problem-solving through simple projects that build confidence and curiosity.</p>
+        <div class="python-live-demo">
+          <h5>Live Python Demo</h5>
+          <p class="muted">This runs directly in your browser using PyScript.</p>
+          <div id="python-output" class="python-output" role="status" aria-live="polite"></div>
+          <py-script>
+from pyscript import Element
+
+name = "Future Coder"
+lines = [f"Hello, {name}! 👋", "Counting from 1 to 5:"]
+
+for i in range(1, 6):
+    lines.append(f"Step {i}")
+
+Element("python-output").write("<br>".join(lines))
+          </py-script>
+        </div>
         <div class="workshop-photos">
           <img src="assets/images/artifacts/programintro1.png" data-full="assets/images/artifacts/programintro1.png" alt="Python workshop photo 1" class="artifact-thumb" />
           <img src="assets/images/artifacts/programintro2.png" data-full="assets/images/artifacts/programintro2.png" alt="Python workshop photo 2" class="artifact-thumb" />
