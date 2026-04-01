@@ -199,17 +199,16 @@
           <h5>Live Python Demo</h5>
           <p class="muted">This runs directly in your browser using PyScript.</p>
           <div id="python-output" class="python-output" role="status" aria-live="polite"></div>
-          <py-script>
-from pyscript import Element
+          <script type="py">
+from pyscript import display
 
 name = "Future Coder"
-lines = [f"Hello, {name}! 👋", "Counting from 1 to 5:"]
+display(f"Hello, {name}! 👋", target="python-output")
+display("Counting from 1 to 5:", target="python-output", append=True)
 
 for i in range(1, 6):
-    lines.append(f"Step {i}")
-
-Element("python-output").write("<br>".join(lines))
-          </py-script>
+    display(f"Step {i}", target="python-output", append=True)
+          </script>
         </div>
         <div class="workshop-photos">
           <img src="assets/images/artifacts/programintro1.png" data-full="assets/images/artifacts/programintro1.png" alt="Python workshop photo 1" class="artifact-thumb" />
