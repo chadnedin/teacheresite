@@ -149,6 +149,33 @@ body{
 
 .sr-only{ position:absolute; left:-10000px; top:auto; width:1px; height:1px; overflow:hidden; }
 
+.skip-link{
+  position:absolute;
+  top:-40px;
+  left:0.75rem;
+  z-index:1000;
+  padding:0.6rem 0.9rem;
+  border-radius:8px;
+  background:var(--text);
+  color:var(--bg);
+  text-decoration:none;
+  font-weight:600;
+}
+.skip-link:focus,
+.skip-link:focus-visible{
+  top:0.75rem;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible{
+  outline:3px solid var(--accent-2);
+  outline-offset:2px;
+  border-radius:6px;
+}
+
 /* Theme toggle */
 .theme-toggle {
   display:inline-flex;
@@ -338,6 +365,16 @@ body{
 :root[data-theme="dark"] .music-card{ border-color: rgba(255,255,255,0.06); }
 .music-card h4{ margin:0; font-size:1.25rem; color:var(--accent); }
 .music-track{ font-style:italic; color:var(--muted); margin:0; }
+
+@media (prefers-reduced-motion: reduce){
+  html{
+    scroll-behavior:auto;
+  }
+  *, *::before, *::after{
+    animation:none !important;
+    transition:none !important;
+  }
+}
 .music-card p{ margin:0.5rem 0; }
 .music-card .btn{ margin-top:auto; }
 

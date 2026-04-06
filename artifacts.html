@@ -4,6 +4,14 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Artifacts — Teacher Candidate E-Portfolio</title>
+  <meta name="description" content="Teaching artifacts from classroom practice, drone workshops, and service learning projects in computer and technology education." />
+  <meta property="og:title" content="Artifacts — Chad Nedin" />
+  <meta property="og:description" content="In-school activities, drone workshops, and service-learning artifacts from my teacher education journey." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/images/chadnedin.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Artifacts — Chad Nedin" />
+  <meta name="twitter:description" content="Explore teaching artifacts, workshop evidence, and monthly growth updates." />
 
   <!-- Theme preloader -->
   <script>
@@ -43,6 +51,7 @@
   <link rel="icon" href="assets/images/favicon.svg" />
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
   <header class="site-header">
     <div class="container header-inner">
       <a href="index.html" class="brand">
@@ -68,7 +77,7 @@
     </div>
   </header>
 
-  <main class="container">
+  <main id="main-content" class="container">
     <section class="artifacts-intro">
       <h2>Artifacts</h2>
       <p>A curated collection of in-school activities, reflections, and service learning workshops. Click an artifact to view or download. These are placeholders you can replace.</p>
@@ -76,6 +85,7 @@
       <nav class="artifact-subnav">
         <a href="#reflections">Reflections & Updates</a>
         <a href="#in-school">In-School Activities</a>
+        <a href="#drone-workshops">Drone Workshops</a>
         <a href="#slp-workshops">Service Learning Workshops</a>
       </nav>
     </section>
@@ -138,37 +148,36 @@
       </article>
     </section>
 
-  </main>
-  
-  <section id="slp-workshops" class="artifact-section container">
-    <h3>Service Learning Project (SLP) — Workshops</h3>
-    <p>Three workshops delivered in collaboration with Big Brothers Big Sisters Sarnia–Lambton. Each card includes three photo placeholders you can replace with your own images.</p>
+    <section id="slp-workshops" class="artifact-section">
+      <h3>Service Learning Project (SLP) — Workshops</h3>
+      <p>Three workshops delivered in collaboration with Big Brothers Big Sisters Sarnia–Lambton. Each card includes three photo placeholders you can replace with your own images.</p>
 
-    <div class="grid artifacts-grid">
-      <article class="artifact-card">
-        <h4>CyberSmart Kids — IoT, Cybersecurity, and AI</h4>
-        <p>Introduction to safe, smart technology use: connected devices, basic cybersecurity habits, and an age-appropriate overview of AI.</p>
-        <div class="workshop-photos">
-          <img src="assets/images/artifacts/cybersmart1.png" data-full="assets/images/artifacts/cybersmart1.png" alt="CyberSmart Kids workshop photo 1" class="artifact-thumb" />
-      </article>
+      <div class="grid artifacts-grid">
+        <article class="artifact-card">
+          <h4>CyberSmart Kids — IoT, Cybersecurity, and AI</h4>
+          <p>Introduction to safe, smart technology use: connected devices, basic cybersecurity habits, and an age-appropriate overview of AI.</p>
+          <div class="workshop-photos">
+            <img src="assets/images/artifacts/cybersmart1.png" data-full="assets/images/artifacts/cybersmart1.png" alt="CyberSmart Kids workshop photo 1" class="artifact-thumb" />
+          </div>
+        </article>
 
-      <article class="artifact-card">
-        <h4>Robotics and IoT</h4>
-        <p>Hands-on robotics activities combined with simple Internet of Things concepts: sensors, basic control, and real-world connections.</p>
-        <div class="workshop-photos">
-          <img src="assets/images/artifacts/robo2.png" data-full="assets/images/artifacts/robo2.png" alt="Robotics and IoT workshop photo 1" class="artifact-thumb" />
-          <img src="assets/images/artifacts/robo1.png" data-full="assets/images/artifacts/robo1.png" alt="Robotics and IoT workshop photo 2" class="artifact-thumb" />
-          
-      </article>
+        <article class="artifact-card">
+          <h4>Robotics and IoT</h4>
+          <p>Hands-on robotics activities combined with simple Internet of Things concepts: sensors, basic control, and real-world connections.</p>
+          <div class="workshop-photos">
+            <img src="assets/images/artifacts/robo2.png" data-full="assets/images/artifacts/robo2.png" alt="Robotics and IoT workshop photo 1" class="artifact-thumb" />
+            <img src="assets/images/artifacts/robo1.png" data-full="assets/images/artifacts/robo1.png" alt="Robotics and IoT workshop photo 2" class="artifact-thumb" />
+          </div>
+        </article>
 
-      <article class="artifact-card">
-        <h4>Python Programming</h4>
-        <p>Beginner-friendly Python session: variables, loops, and problem-solving through simple projects that build confidence and curiosity.</p>
-        <div class="python-live-demo">
-          <h5>Live Python Demo</h5>
-          <p class="muted">This runs directly in your browser using PyScript.</p>
-          <div id="python-output" class="python-output" role="status" aria-live="polite"></div>
-          <script type="py">
+        <article class="artifact-card">
+          <h4>Python Programming</h4>
+          <p>Beginner-friendly Python session: variables, loops, and problem-solving through simple projects that build confidence and curiosity.</p>
+          <div class="python-live-demo">
+            <h5>Live Python Demo</h5>
+            <p class="muted">This runs directly in your browser using PyScript.</p>
+            <div id="python-output" class="python-output" role="status" aria-live="polite"></div>
+            <script type="py">
 from pyscript import display
 
 name = "Future Coder"
@@ -177,16 +186,16 @@ display("Counting from 1 to 5:", target="python-output", append=True)
 
 for i in range(1, 6):
     display(f"Step {i}", target="python-output", append=True)
-          </script>
-        </div>
-        <div class="workshop-photos">
-          <img src="assets/images/artifacts/programintro1.png" data-full="assets/images/artifacts/programintro1.png" alt="Python workshop photo 1" class="artifact-thumb" />
-          <img src="assets/images/artifacts/programintro2.png" data-full="assets/images/artifacts/programintro2.png" alt="Python workshop photo 2" class="artifact-thumb" />
-          
-        </div>
-      </article>
-    </div>
-  </section>
+            </script>
+          </div>
+          <div class="workshop-photos">
+            <img src="assets/images/artifacts/programintro1.png" data-full="assets/images/artifacts/programintro1.png" alt="Python workshop photo 1" class="artifact-thumb" />
+            <img src="assets/images/artifacts/programintro2.png" data-full="assets/images/artifacts/programintro2.png" alt="Python workshop photo 2" class="artifact-thumb" />
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
 
   <footer class="site-footer">
     <div class="container footer-inner">
