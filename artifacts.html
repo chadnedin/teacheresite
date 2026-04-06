@@ -82,6 +82,14 @@
       <h2>Artifacts</h2>
       <p>A curated collection of in-school activities, reflections, and service learning workshops. Click an artifact to view or download. These are placeholders you can replace.</p>
 
+      <div class="artifact-filters" role="group" aria-label="Filter artifacts by category">
+        <button class="artifact-filter is-active" type="button" data-filter="all">All</button>
+        <button class="artifact-filter" type="button" data-filter="reflection">Reflections</button>
+        <button class="artifact-filter" type="button" data-filter="in-school">In-School</button>
+        <button class="artifact-filter" type="button" data-filter="drone">Drone</button>
+        <button class="artifact-filter" type="button" data-filter="slp">SLP Workshops</button>
+      </div>
+
       <nav class="artifact-subnav">
         <a href="#reflections">Reflections & Updates</a>
         <a href="#in-school">In-School Activities</a>
@@ -93,7 +101,7 @@
     <section id="reflections" class="artifact-section">
       <h3>Reflections & Monthly Updates</h3>
       <div class="grid artifacts-grid">
-        <article class="artifact-card">
+        <article class="artifact-card" data-category="reflection">
           <h4>October 2025 — Website Setup</h4>
           <p>Type: Reflection — Website created and sample artifacts collected.</p>
           <div class="artifact-actions">
@@ -101,7 +109,7 @@
           </div>
         </article>
 
-        <article class="artifact-card">
+        <article class="artifact-card" data-category="reflection">
           <h4>December 2025 — Early Practicum Notes</h4>
           <p>Type: Reflection — Observations from in-school visits and initial teaching attempts.</p>
           <div class="artifact-actions">
@@ -114,7 +122,7 @@
     <section id="in-school" class="artifact-section">
       <h3>In-School Activities</h3>
       <div class="grid artifacts-grid">
-        <article class="artifact-card">
+        <article class="artifact-card" data-category="in-school">
           <h4>Ontario Skilled Trades Truck — Driving Simulator</h4>
           <p>Assisted with the Ontario Skilled Trades Truck, demonstrating the driving simulator and other interactive activities for Grade 7 and 8 students from nearby schools.</p>
           <div class="workshop-photos">
@@ -125,7 +133,7 @@
           </div>
         </article>
 
-        <article class="artifact-card">
+        <article class="artifact-card" data-category="in-school">
           <h4>TAS1O Practicum — Series and Parallel Circuits</h4>
           <p>Classroom experience teaching Grade 9 students series and parallel circuits during practicum placement at St. Patrick's Catholic High School.</p>
           <img src="assets/images/artifacts/classroomcircuits.jpg" data-full="assets/images/artifacts/classroomcircuits.jpg" alt="Teaching circuits in classroom" class="artifact-thumb" />
@@ -135,7 +143,7 @@
 
     <section id="drone-workshops" class="artifact-section container">
       <h3>Drone Technology &amp; RPAS Certification Workshops</h3>
-      <article class="artifact-card drone-card">
+      <article class="artifact-card drone-card" data-category="drone">
         <h4>Drone Technology &amp; RPAS Certification Workshops (Grade 8 &amp; SHSM)</h4>
         <p>As a supply teacher, I designed and facilitated interactive drone workshops across multiple elementary schools and a secondary school. For Grade 8 students, I introduced Canadian aviation regulations, potential drone careers, and safe operation through a timed obstacle course. At the secondary level, I worked with Grade 11 and 12 Specialist High Skills Major (SHSM) students, guiding them through drone assembly, advanced flight practice, and preparation for their Transport Canada Basic Remote Pilot License. The workshops culminated in an engaging obstacle course challenge, emphasizing effective, respectful, and safe drone operation.</p>
         <div class="drone-media">
@@ -153,7 +161,7 @@
       <p>Three workshops delivered in collaboration with Big Brothers Big Sisters Sarnia–Lambton. Each card includes three photo placeholders you can replace with your own images.</p>
 
       <div class="grid artifacts-grid">
-        <article class="artifact-card">
+        <article class="artifact-card" data-category="slp">
           <h4>CyberSmart Kids — IoT, Cybersecurity, and AI</h4>
           <p>Introduction to safe, smart technology use: connected devices, basic cybersecurity habits, and an age-appropriate overview of AI.</p>
           <div class="workshop-photos">
@@ -161,7 +169,7 @@
           </div>
         </article>
 
-        <article class="artifact-card">
+        <article class="artifact-card" data-category="slp">
           <h4>Robotics and IoT</h4>
           <p>Hands-on robotics activities combined with simple Internet of Things concepts: sensors, basic control, and real-world connections.</p>
           <div class="workshop-photos">
@@ -170,7 +178,7 @@
           </div>
         </article>
 
-        <article class="artifact-card">
+        <article class="artifact-card" data-category="slp">
           <h4>Python Programming</h4>
           <p>Beginner-friendly Python session: variables, loops, and problem-solving through simple projects that build confidence and curiosity.</p>
           <div class="python-live-demo">

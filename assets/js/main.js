@@ -141,19 +141,78 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  // --- Simple client-side validation for contact form that uses mailto (graceful) ---
+  // --- Contact form: endpoint-ready with mailto fallback ---
   const form = document.getElementById('contactForm');
   if (form) {
+    const statusEl = document.getElementById('contactStatus');
+    const setStatus = (message, type) => {
+      if (!statusEl) return;
+      statusEl.textContent = message;
+      statusEl.classList.remove('success', 'error');
+      if (type) statusEl.classList.add(type);
+    };
+
+    const getField = (selector) => form.querySelector(selector)?.value.trim() || '';
+    const isValidEmail = (value) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+
     form.addEventListener('submit', function (e) {
-      const name = form.querySelector('#name').value.trim();
-      const email = form.querySelector('#email').value.trim();
-      const message = form.querySelector('#message').value.trim();
-      if (!name || !email || !message) {
+      const name = getField('#name');
+      const email = getField('#email');
+      const message = getField('#message');
+
+      if (!name || !email || !message || !isValidEmail(email)) {
         e.preventDefault();
-        alert('Please complete all fields before sending.');
-      } else {
-        // Let mailto proceed
+        setStatus('Please enter a valid name, email, and message.', 'error');
+        return;
       }
+
+      const endpoint = (form.getAttribute('data-endpoint') || '').trim();
+      if (!endpoint) {
+        setStatus('Opening your default email app to send this message...', 'success');
+        return;
+      }
+
+      e.preventDefault();
+      const submitBtn = form.querySelector('button[type="submit"]');
+      if (submitBtn) submitBtn.disabled = true;
+      setStatus('Sending message...', null);
+
+      fetch(endpoint, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, email, message })
+      })
+        .then((res) => {
+          if (!res.ok) throw new Error('Request failed');
+          setStatus('Thanks. Your message was sent successfully.', 'success');
+          form.reset();
+        })
+        .catch(() => {
+          setStatus('Message could not be sent right now. Please email directly at chadnedin@gmail.com.', 'error');
+        })
+        .finally(() => {
+          if (submitBtn) submitBtn.disabled = false;
+        });
+    });
+  }
+
+  // --- Artifacts filter chips ---
+  const filterButtons = Array.from(document.querySelectorAll('.artifact-filter'));
+  if (filterButtons.length) {
+    const cards = Array.from(document.querySelectorAll('.artifact-card[data-category]'));
+
+    filterButtons.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const selected = btn.getAttribute('data-filter') || 'all';
+        filterButtons.forEach((item) => item.classList.remove('is-active'));
+        btn.classList.add('is-active');
+
+        cards.forEach((card) => {
+          const category = card.getAttribute('data-category');
+          const show = selected === 'all' || category === selected;
+          card.style.display = show ? '' : 'none';
+        });
+      });
     });
   }
 
