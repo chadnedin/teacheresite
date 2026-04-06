@@ -262,15 +262,23 @@ body{
 .drone-media-item{
   width:100%;
   display:block;
-  min-height:260px;
   border-radius:8px;
+}
+
+.drone-media img.drone-media-item{
+  aspect-ratio:16 / 9;
   object-fit:cover;
+}
+
+.drone-media video.drone-media-item{
+  aspect-ratio:16 / 9;
+  height:auto;
   background:#0f172a;
 }
 
 @media (max-width:640px){
-  .drone-media-item{
-    min-height:200px;
+  .drone-media{
+    grid-template-columns:1fr;
   }
 }
 
