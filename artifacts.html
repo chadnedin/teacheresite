@@ -46,8 +46,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/style.css" />
-  <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
-  <script defer src="https://pyscript.net/latest/pyscript.js"></script>
   <link rel="icon" href="assets/images/favicon.svg" />
 </head>
 <body>
@@ -80,7 +78,7 @@
   <main id="main-content" class="container">
     <section class="artifacts-intro">
       <h2>Artifacts</h2>
-      <p>A curated collection of in-school activities, reflections, and service learning workshops. Click an artifact to view or download. These are placeholders you can replace.</p>
+      <p>A curated collection of in-school activities, reflections, and service learning workshops. Each artifact highlights context, facilitation, and learner impact.</p>
 
       <div class="artifact-filters" role="group" aria-label="Filter artifacts by category">
         <button class="artifact-filter is-active" type="button" data-filter="all">All</button>
@@ -96,6 +94,30 @@
         <a href="#drone-workshops">Drone Workshops</a>
         <a href="#slp-workshops">Service Learning Workshops</a>
       </nav>
+    </section>
+
+    <section class="artifact-section case-study-section">
+      <h3>Featured Case Studies</h3>
+      <div class="grid evidence-grid">
+        <article class="card evidence-card">
+          <h4>Ontario Skilled Trades Truck</h4>
+          <p><strong>Context:</strong> Grade 7/8 visitors explored pathways in skilled trades and technology.</p>
+          <p><strong>What I Did:</strong> Supported station facilitation and guided simulator participation.</p>
+          <p><strong>Outcome:</strong> Students made stronger links between school learning and real careers.</p>
+        </article>
+        <article class="card evidence-card">
+          <h4>Drone Event in Wyoming</h4>
+          <p><strong>Context:</strong> Holy Rosary Grade 7/8 students engaged in applied drone learning.</p>
+          <p><strong>What I Did:</strong> Helped organize, host, and manage the event logistics and activities.</p>
+          <p><strong>Outcome:</strong> Learners practiced safe flight behaviors in a structured challenge setting.</p>
+        </article>
+        <article class="card evidence-card">
+          <h4>SLP Youth Technology Workshops</h4>
+          <p><strong>Context:</strong> Community youth needed approachable entry points to computing.</p>
+          <p><strong>What I Did:</strong> Co-delivered sessions in cybersecurity, robotics, and Python.</p>
+          <p><strong>Outcome:</strong> Participants gained confidence with real-world technology concepts.</p>
+        </article>
+      </div>
     </section>
 
     <section id="reflections" class="artifact-section">
@@ -145,13 +167,13 @@
       <h3>Drone Technology &amp; RPAS Certification Workshops</h3>
       <article class="artifact-card drone-card" data-category="drone">
         <h4>Drone Technology &amp; RPAS Certification Workshops (Grade 8 &amp; SHSM)</h4>
-        <p>As a supply teacher, I designed and facilitated interactive drone workshops across multiple elementary schools and a secondary school. For Grade 8 students, I introduced Canadian aviation regulations, potential drone careers, and safe operation through a timed obstacle course. At the secondary level, I worked with Grade 11 and 12 Specialist High Skills Major (SHSM) students, guiding them through drone assembly, advanced flight practice, and preparation for their Transport Canada Basic Remote Pilot License. The workshops culminated in an engaging obstacle course challenge, emphasizing effective, respectful, and safe drone operation.</p>
+        <p>As a supply teacher, I designed and facilitated interactive drone workshops across multiple elementary schools and one secondary school.</p>
+        <p>For Grade 8 learners, I introduced Canadian aviation regulations, drone career pathways, and safe operation through a timed obstacle course.</p>
+        <p>At the secondary level, I worked with Grade 11 and 12 SHSM students on assembly, advanced flight practice, and preparation for the Transport Canada Basic Remote Pilot License.</p>
+        <p>I also helped organize, host, and manage a drone event in Wyoming with the Grade 7/8 group from Holy Rosary Catholic School.</p>
         <div class="drone-media">
           <img src="assets/images/artifacts/drone_pic1.jpg" alt="Drone Obstacle Course Setup" class="drone-media-item">
-          <video controls class="drone-media-item">
-            <source src="assets/images/artifacts/drone_vid1.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
+          <img src="assets/images/artifacts/drone_pic2.png" alt="Grade 7/8 drone event in Wyoming" class="drone-media-item">
         </div>
       </article>
     </section>
@@ -181,21 +203,6 @@
         <article class="artifact-card" data-category="slp">
           <h4>Python Programming</h4>
           <p>Beginner-friendly Python session: variables, loops, and problem-solving through simple projects that build confidence and curiosity.</p>
-          <div class="python-live-demo">
-            <h5>Live Python Demo</h5>
-            <p class="muted">This runs directly in your browser using PyScript.</p>
-            <div id="python-output" class="python-output" role="status" aria-live="polite"></div>
-            <script type="py">
-from pyscript import display
-
-name = "Future Coder"
-display(f"Hello, {name}! 👋", target="python-output")
-display("Counting from 1 to 5:", target="python-output", append=True)
-
-for i in range(1, 6):
-    display(f"Step {i}", target="python-output", append=True)
-            </script>
-          </div>
           <div class="workshop-photos">
             <img src="assets/images/artifacts/programintro1.png" data-full="assets/images/artifacts/programintro1.png" alt="Python workshop photo 1" class="artifact-thumb" />
             <img src="assets/images/artifacts/programintro2.png" data-full="assets/images/artifacts/programintro2.png" alt="Python workshop photo 2" class="artifact-thumb" />

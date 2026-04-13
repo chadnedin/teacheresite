@@ -339,6 +339,59 @@ document.addEventListener('DOMContentLoaded', function () {
     if (e.key === 'ArrowLeft') showNext(-1);
   });
 
+  // --- Scroll reveal for key content blocks ---
+  const revealTargets = Array.from(document.querySelectorAll(
+    '.card, .artifact-card, .timeline-card, .metric-card, .hero-panel, .video-embed'
+  ));
+  revealTargets.forEach((el) => el.classList.add('reveal'));
+
+  if ('IntersectionObserver' in window) {
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('in-view');
+        observer.unobserve(entry.target);
+      });
+    }, { threshold: 0.16 });
+
+    revealTargets.forEach((el) => revealObserver.observe(el));
+  } else {
+    revealTargets.forEach((el) => el.classList.add('in-view'));
+  }
+
+  // --- Top progress bar and back-to-top control ---
+  const progressBar = document.createElement('div');
+  progressBar.className = 'scroll-progress';
+  document.body.appendChild(progressBar);
+
+  const topBtn = document.createElement('button');
+  topBtn.className = 'back-to-top';
+  topBtn.type = 'button';
+  topBtn.setAttribute('aria-label', 'Back to top');
+  topBtn.textContent = '↑';
+  document.body.appendChild(topBtn);
+
+  const updateScrollUI = () => {
+    const doc = document.documentElement;
+    const maxScroll = doc.scrollHeight - window.innerHeight;
+    const progress = maxScroll > 0 ? Math.min(window.scrollY / maxScroll, 1) : 0;
+    progressBar.style.transform = `scaleX(${progress})`;
+
+    if (window.scrollY > 450) {
+      topBtn.classList.add('visible');
+    } else {
+      topBtn.classList.remove('visible');
+    }
+  };
+
+  window.addEventListener('scroll', updateScrollUI, { passive: true });
+  window.addEventListener('resize', updateScrollUI);
+  updateScrollUI();
+
+  topBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
   // Observe DOM for updates to gallery items
   const galleryObserver = new MutationObserver(() => {
     // no-op here; gallery selectors are queried when opening
